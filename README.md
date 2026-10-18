@@ -1,6 +1,6 @@
-# Ovum Mira Heat Pump Integration for Home Assistant (HACS)
+# Ovum Mira Heat Pump Integration for Home Assistant (Marketplace)
 
-[![HACS Validation](https://github.com/aleho/ha-ovum-mira-hacs/actions/workflows/validate.yml/badge.svg)](https://github.com/aleho/ha-ovum-mira-hacs/actions/workflows/validate.yml)
+[![Marketplace Validation](https://github.com/aleho/ha-ovum-mira-hacs/actions/workflows/validate.yml/badge.svg)](https://github.com/aleho/ha-ovum-mira-hacs/actions/workflows/validate.yml)
 [![hacs_badge](https://img.shields.io/badge/HACS-Custom-41BDF5.svg)](https://github.com/hacs/default)
 
 This custom integration integrates **Ovum Mira heat pump systems** with Home Assistant using the new **Modbus
@@ -33,12 +33,16 @@ libray implementation.
 
 ---
 
-## Installation via HACS
+## Installation
 
-1. Make sure you have [HACS](https://hacs.xyz/) installed in your Home Assistant instance.
-2. In HACS, go to **Integrations** > Three dots menu in top-right > **Custom repositories**.
-3. Add this repository URL, choose **Integration** as category, and click **Add**.
-4. Search for **Ovum Mira** in HACS, click **Download**, and restart Home Assistant.
+[![Open your Home Assistant instance and add a repository to the Marketplace.](https://my.home-assistant.io/badges/marketplace_repository.svg)](https://my.home-assistant.io/redirect/marketplace_repository/?owner=aleho&repository=ha-ovum-mira-hacs&category=integration)
+
+
+### Manual installation
+
+1. In the marketplace, click the three dots menu in top-right > **Custom repositories**.
+2. Enter `https://github.com/aleho/ha-ovum-mira-hacs`, choose **Integration** as category, and click **Add**.
+3. Search for **Ovum Mira** in the marketplace, click **Download**.
 
 ---
 
