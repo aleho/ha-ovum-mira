@@ -14,7 +14,7 @@ classifiers = [
 dependencies = ["ovum-mira-modbus==0.0.6"]
 
 [project.optional-dependencies]
-dev = ["homeassistant==2026.9.3"]
+dev = ["homeassistant==2026.10.0"]
 
 [tool.setuptools]
 py-modules = ["custom_components"]
