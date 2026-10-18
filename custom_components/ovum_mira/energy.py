@@ -18,6 +18,8 @@ from .entity import OvumEntity
 class OvumEnergySensor(IntegrationSensor):
     _attr_has_entity_name = True
 
+    _attr_display_precision = 3
+
     def __init__(
         self,
         *,
@@ -43,7 +45,7 @@ class OvumEnergySensor(IntegrationSensor):
             round_digits=0,
             max_sub_interval=timedelta(minutes=5),
             unit_time=UnitOfTime.HOURS,
-            unit_prefix="k",
+            unit_prefix=None,
             name=None,
         )
 
