@@ -66,8 +66,8 @@ class OvumWaterHeater(OvumEntityWriting, WaterHeaterEntity):
     async def async_set_operation_mode(self, operation_mode: str) -> None:
         if operation_mode == STATE_ON:
             await self.async_turn_on()
-
-        await self.async_turn_off()
+        else:
+            await self.async_turn_off()
 
     @override
     async def async_turn_off(self, **kwargs: Any) -> None:
