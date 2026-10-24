@@ -1,5 +1,5 @@
 [project]
-name = "ha-ovum-mira-hacs"
+name = "ha-ovum-mira"
 version = "0.1.0"
 description = "Custom integration for Ovum Mira heat pump systems over Modbus."
 readme = "README.md"
@@ -20,7 +20,7 @@ dev = ["homeassistant==2026.10.0"]
 py-modules = ["custom_components"]
 
 [project.urls]
-Repository = "https://github.com/aleho/ha-ovum-mira-hacs"
+Repository = "https://github.com/aleho/ha-ovum-mira"
 
 [tool.ruff]
 target-version = "py314"

@@ -4,10 +4,10 @@
   "codeowners": ["@aleho"],
   "config_flow": true,
   "dependencies": ["modbus", "integration"],
-  "documentation": "https://github.com/aleho/ha-ovum-mira-hacs",
+  "documentation": "https://github.com/aleho/ha-ovum-mira",
   "integration_type": "device",
   "iot_class": "local_polling",
-  "issue_tracker": "https://github.com/aleho/ha-ovum-mira-hacs/issues",
+  "issue_tracker": "https://github.com/aleho/ha-ovum-mira/issues",
   "loggers": ["custom_components.ovum_mira"],
   "requirements": ["ovum-mira-modbus==0.0.6", "modbus-connection>=4.12.1,<5"],
   "version": "0.1.0"

@@ -1,6 +1,6 @@
 # Ovum Mira Heat Pump Integration for Home Assistant (Marketplace)
 
-[![Marketplace Validation](https://github.com/aleho/ha-ovum-mira-hacs/actions/workflows/validate.yml/badge.svg)](https://github.com/aleho/ha-ovum-mira-hacs/actions/workflows/validate.yml)
+[![Marketplace Validation](https://github.com/aleho/ha-ovum-mira/actions/workflows/validate.yml/badge.svg)](https://github.com/aleho/ha-ovum-mira/actions/workflows/validate.yml)
 [![hacs_badge](https://img.shields.io/badge/HACS-Custom-41BDF5.svg)](https://github.com/hacs/default)
 
 This custom integration integrates **Ovum Mira heat pump systems** with Home Assistant using the new **Modbus
@@ -35,13 +35,13 @@ libray implementation.
 
 ## Installation
 
-[![Open your Home Assistant instance and add a repository to the Marketplace.](https://my.home-assistant.io/badges/marketplace_repository.svg)](https://my.home-assistant.io/redirect/marketplace_repository/?owner=aleho&repository=ha-ovum-mira-hacs&category=integration)
+[![Open your Home Assistant instance and add a repository to the Marketplace.](https://my.home-assistant.io/badges/marketplace_repository.svg)](https://my.home-assistant.io/redirect/marketplace_repository/?owner=aleho&repository=ha-ovum-mira&category=integration)
 
 
 ### Manual installation
 
 1. In the marketplace, click the three dots menu in top-right > **Custom repositories**.
-2. Enter `https://github.com/aleho/ha-ovum-mira-hacs`, choose **Integration** as category, and click **Add**.
+2. Enter `https://github.com/aleho/ha-ovum-mira`, choose **Integration** as category, and click **Add**.
 3. Search for **Ovum Mira** in the marketplace, click **Download**.
 
 ---
@@ -59,8 +59,8 @@ libray implementation.
 
 - `mkdir ha-ovum-mira && cd ha-ovum-mira`
 - `git clone https://github.com/aleho/ovum-mira-modbus.git`
-- `git clone https://github.com/aleho/ha-ovum-mira-hacs.git`
-- `cd ha-ovum-mira-hacs && bin/install_dev.sh`
+- `git clone https://github.com/aleho/ha-ovum-mira.git`
+- `cd ha-ovum-mira && bin/install_dev.sh`
 
 This should get you a local setup where you can develop the library and integration from one single environment.
 
