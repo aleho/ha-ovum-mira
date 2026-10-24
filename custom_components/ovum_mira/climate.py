@@ -33,7 +33,7 @@ from .entity import (
     OvumEntityWriting,
     has_heating,
 )
-from .enum import Component
+from .enum import Component, HEATING
 
 
 @dataclass(frozen=True, kw_only=True)
@@ -224,7 +224,7 @@ async def async_setup_entry(
     entry: OvumConfigEntry,
     async_add_entities: AddConfigEntryEntitiesCallback,
 ) -> None:
-    for component in Component.heating:
+    for component in HEATING:
         if has_heating(entry, component):
             async_add_entities(
                 OvumClimateHeating.from_list(

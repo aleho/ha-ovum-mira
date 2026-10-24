@@ -48,7 +48,7 @@ from .entity import (
     enum_options,
     has_heating,
 )
-from .enum import Component
+from .enum import Component, HEATING
 
 type TSensorDescription = OvumSensorDescription | OvumMeasurementSensorDescription
 
@@ -472,7 +472,7 @@ async def async_setup_entry(
     sensors = OvumSensor.from_list(entry, SENSORS)
     async_add_entities(sensors.values())
 
-    for component in Component.heating:
+    for component in HEATING:
         if has_heating(entry, component):
             async_add_entities(
                 OvumSensor.from_list(entry, _heating_descriptions(component)).values()
