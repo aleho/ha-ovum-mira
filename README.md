@@ -1,7 +1,6 @@
 # Ovum Mira Heat Pump Integration for Home Assistant (Marketplace)
 
 [![Marketplace Validation](https://github.com/aleho/ha-ovum-mira/actions/workflows/validate.yml/badge.svg)](https://github.com/aleho/ha-ovum-mira/actions/workflows/validate.yml)
-[![hacs_badge](https://img.shields.io/badge/HACS-Custom-41BDF5.svg)](https://github.com/hacs/default)
 
 This custom integration integrates **Ovum Mira heat pump systems** with Home Assistant using the new **Modbus
 Connection** framework.
@@ -9,7 +8,7 @@ Connection** framework.
 This is not an official integration and not sponsored by Ovum.
 
 The underlying device communication is done through the [ovum-mira-modbus](https://github.com/aleho/ovum-mira-modbus/)
-libray implementation.
+library implementation.
 
 
 ![Device overview](docs/device_overview.png)
@@ -26,14 +25,14 @@ libray implementation.
 
 ## Installation
 
-[![Open your Home Assistant instance and add a repository to the Marketplace.](https://my.home-assistant.io/badges/marketplace_repository.svg)](https://my.home-assistant.io/redirect/marketplace_repository/?owner=aleho&repository=ha-ovum-mira&category=integration)
+[![Open your Home Assistant instance and open a repository in the Marketplace.](https://my.home-assistant.io/badges/marketplace_repository.svg)](https://my.home-assistant.io/redirect/marketplace_repository/?owner=aleho&repository=ha-ovum-mira&category=integration)
+
+[![Open your Home Assistant instance and start setting up a new integration.](https://my.home-assistant.io/badges/config_flow_start.svg)](https://my.home-assistant.io/redirect/config_flow_start/?domain=ovum_mira)
 
 
 ### Manual installation
 
-1. In the marketplace, click the three dots menu in top-right > **Custom repositories**.
-2. Enter `https://github.com/aleho/ha-ovum-mira`, choose **Integration** as category, and click **Add**.
-3. Search for **Ovum Mira** in the marketplace, click **Download**.
+In the marketplace search for **Ovum Mira**, open the integration details and click **Download**.
 
 ---
 
