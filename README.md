@@ -16,20 +16,11 @@ libray implementation.
 
 ---
 
-## Features
+## Features (e.g.)
 
-- **Multi-Unit Topology**: Seamlessly communicates across HSM (Heating Manager) and WPM (Heat Pump).
-- **Climate Platform**: View and set target flow temperature for Heating Circuits.
-- **Water Heater Platform**: View and control Hot Water (WW) reservoir temperatures.
-- **Sensors**:
-    - Outdoor temperature (°C)
-    - Heat pump operating status enum
-    - Heat pump electrical power consumption (kW)
-    - Heat pump thermal power production (kW)
-    - Heat pump demand (%)
-    - Heating circuit flow and room temperatures (°C)
-    - DHW top and bottom reservoir temperatures (°C)
-    - Buffer tank actual and target temperatures (°C)
+- **Climate**: View and set target temperatures.
+- **Water Heater**: View and control hot water temperatures.
+- **Energy management**: Communicate current PV production and battery status.
 
 ---
 
