@@ -6,7 +6,6 @@ from dataclasses import dataclass
 from typing import Any, override
 
 from homeassistant.components.water_heater import (
-    STATE_HEAT_PUMP,
     STATE_OFF,
     STATE_ON,
     WaterHeaterEntity,
@@ -47,7 +46,7 @@ class OvumWaterHeater(OvumEntityWriting, WaterHeaterEntity):
     _attr_min_temp = 0
     _attr_max_temp = 67
 
-    _attr_current_operation = STATE_HEAT_PUMP
+    _attr_current_operation = STATE_OFF
     _attr_operation_list = [STATE_OFF, STATE_ON]
 
     _attr_supported_features = (
