@@ -48,7 +48,7 @@ from .entity import (
     enum_options,
     has_heating,
 )
-from .enum import Component, HEATING
+from .enum import HEATING, Component
 
 type TSensorDescription = OvumSensorDescription | OvumMeasurementSensorDescription
 

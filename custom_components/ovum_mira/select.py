@@ -27,7 +27,7 @@ from .entity import (
     enum_options,
     has_heating,
 )
-from .enum import Component, HEATING
+from .enum import HEATING, Component
 
 
 @dataclass(frozen=True, kw_only=True)
