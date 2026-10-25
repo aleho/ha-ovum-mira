@@ -46,16 +46,20 @@ class OvumWaterHeater(OvumEntityWriting, WaterHeaterEntity):
     _attr_min_temp = 0
     _attr_max_temp = 67
 
-    _attr_current_operation = STATE_OFF
     _attr_operation_list = [STATE_OFF, STATE_ON]
 
     _attr_supported_features = (
-        WaterHeaterEntityFeature.TARGET_TEMPERATURE | WaterHeaterEntityFeature.ON_OFF
+        WaterHeaterEntityFeature.TARGET_TEMPERATURE
+        | WaterHeaterEntityFeature.ON_OFF
+        | WaterHeaterEntityFeature.OPERATION_MODE
     )
 
     @override
     @property
     def current_operation(self) -> str | None:
+        if self._attr_current_operation is not None:
+            return self._attr_current_operation
+
         if self._subsystem.status == OvumHotWaterStatus.ON:
             return STATE_ON
 
@@ -70,10 +74,12 @@ class OvumWaterHeater(OvumEntityWriting, WaterHeaterEntity):
 
     @override
     async def async_turn_off(self, **kwargs: Any) -> None:
+        self._attr_current_operation = STATE_OFF
         await self._write_value(OvumHotWaterStatus.OFF, "status")
 
     @override
     async def async_turn_on(self, **kwargs: Any) -> None:
+        self._attr_current_operation = STATE_ON
         await self._write_value(OvumHotWaterStatus.ON, "status")
 
     @override
