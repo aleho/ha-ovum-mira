@@ -70,10 +70,12 @@ class OvumWaterHeater(OvumEntityWriting, WaterHeaterEntity):
 
     @override
     async def async_turn_off(self, **kwargs: Any) -> None:
+        self._attr_current_operation = STATE_OFF
         await self._write_value(OvumHotWaterStatus.OFF, "status")
 
     @override
     async def async_turn_on(self, **kwargs: Any) -> None:
+        self._attr_current_operation = STATE_ON
         await self._write_value(OvumHotWaterStatus.ON, "status")
 
     @override
