@@ -49,7 +49,7 @@ class OvumClimateHeating(OvumEntityWriting, ClimateEntity):
     _attr_hvac_mode = HVACMode.AUTO
     _attr_hvac_modes = [HVACMode.OFF, HVACMode.HEAT_COOL, HVACMode.HEAT, HVACMode.COOL]
 
-    _attr_temperature_unit = UnitOfTemperature.CELSIUS
+    _attr_native_temperature_unit = UnitOfTemperature.CELSIUS
 
     _attr_supported_features = (
         ClimateEntityFeature.TARGET_TEMPERATURE | ClimateEntityFeature.TURN_OFF
@@ -59,8 +59,8 @@ class OvumClimateHeating(OvumEntityWriting, ClimateEntity):
     _attr_target_temperature_step = PRECISION_HALVES
     _attr_min_temp = 0
     _attr_max_temp = 50
-    _attr_target_temperature_low = 0
-    _attr_target_temperature_high = 50
+    _attr_native_target_temperature_low = 0
+    _attr_native_target_temperature_high = 50
 
     @override
     @property

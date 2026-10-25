@@ -35,11 +35,11 @@ class OvumWaterHeaterDescription(OvumEntityDescription, WaterHeaterEntityDescrip
 
 
 class OvumWaterHeater(OvumEntityWriting, WaterHeaterEntity):
-    """Water hater entity for Ovum Mira."""
+    """Water heater entity for Ovum Mira."""
 
     entity_description: OvumWaterHeaterDescription
 
-    _attr_temperature_unit = UnitOfTemperature.CELSIUS
+    _attr_native_temperature_unit = UnitOfTemperature.CELSIUS
 
     _attr_precision = PRECISION_TENTHS
     _attr_target_temperature_step = PRECISION_WHOLE
