@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="595.6" height="645.6" version="1.1" viewBox="0 0 595.6 645.6" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="645" height="645" version="1.1" viewBox="0 0 645 645" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <defs>
         <linearGradient id="heatGrad" x1="570.05" x2="1014.2" y1="59.994" y2="504.17" gradientTransform="scale(.68801 1.4535)" gradientUnits="userSpaceOnUse">
             <stop stop-color="#fb7185" offset="0"/>
@@ -31,7 +31,7 @@
         <linearGradient id="linearGradient36" x1="51.551" x2="155.57" y1="1541.1" y2="1541.1" gradientTransform="scale(3.8624 .25891)" gradientUnits="userSpaceOnUse" xlink:href="#metalGrad"/>
         <linearGradient id="linearGradient37" x1="-97.5" x2="97.5" y1="-97.5" y2="-97.5" gradientUnits="userSpaceOnUse" xlink:href="#metalGrad"/>
     </defs>
-    <g transform="translate(-102.2 -87.2)">
+    <g transform="translate(-77.5 -87.5)">
         <path d="m430 125c130 15 230 145 230 305 0 140-90 245-230 265" fill="none" filter="url(#glowHeat)" stroke="url(#heatGrad)" stroke-linecap="round" stroke-width="18"/>
         <path d="m400 150c-130 0-230 130-230 290 0 140 90 230 230 230s230-90 230-230c0-160-100-290-230-290z" fill="#0f172a" stroke="url(#linearGradient35)" stroke-width="6"/>
         <path d="m310 260q90-20 180 0" fill="none" stroke="#334155" stroke-linecap="round" stroke-width="8"/>
