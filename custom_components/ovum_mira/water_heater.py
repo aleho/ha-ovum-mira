@@ -20,9 +20,7 @@ from homeassistant.const import (
 )
 from homeassistant.core import HomeAssistant
 from homeassistant.helpers.entity_platform import AddConfigEntryEntitiesCallback
-from ovum_mira_modbus import (
-    OvumHotWaterStatus,
-)
+from ovum_mira_modbus import OvumHotWaterStatus
 
 from .coordinator import OvumConfigEntry
 from .entity import OvumEntityDescription, OvumEntityWriting
@@ -35,11 +33,11 @@ class OvumWaterHeaterDescription(OvumEntityDescription, WaterHeaterEntityDescrip
 
 
 class OvumWaterHeater(OvumEntityWriting, WaterHeaterEntity):
-    """Water hater entity for Ovum Mira."""
+    """Water heater entity for Ovum Mira."""
 
     entity_description: OvumWaterHeaterDescription
 
-    _attr_temperature_unit = UnitOfTemperature.CELSIUS
+    _attr_native_temperature_unit = UnitOfTemperature.CELSIUS
 
     _attr_precision = PRECISION_TENTHS
     _attr_target_temperature_step = PRECISION_WHOLE
@@ -84,12 +82,12 @@ class OvumWaterHeater(OvumEntityWriting, WaterHeaterEntity):
 
     @override
     @property
-    def target_temperature(self) -> float | None:
+    def native_target_temperature(self) -> float | None:
         return self._subsystem.temperature_target
 
     @override
     @property
-    def current_temperature(self) -> float | None:
+    def native_current_temperature(self) -> float | None:
         return self._subsystem.reservoir_temperature_bottom
 
     @override
@@ -97,7 +95,7 @@ class OvumWaterHeater(OvumEntityWriting, WaterHeaterEntity):
         if (temperature := kwargs.get(ATTR_TEMPERATURE)) is None:
             return
 
-        self._attr_target_temperature = temperature
+        self._attr_native_target_temperature = temperature
         await self._write_value(temperature, "temperature_target")
 
 

@@ -49,7 +49,7 @@ class OvumClimateHeating(OvumEntityWriting, ClimateEntity):
     _attr_hvac_mode = HVACMode.AUTO
     _attr_hvac_modes = [HVACMode.OFF, HVACMode.HEAT_COOL, HVACMode.HEAT, HVACMode.COOL]
 
-    _attr_temperature_unit = UnitOfTemperature.CELSIUS
+    _attr_native_temperature_unit = UnitOfTemperature.CELSIUS
 
     _attr_supported_features = (
         ClimateEntityFeature.TARGET_TEMPERATURE | ClimateEntityFeature.TURN_OFF
@@ -59,8 +59,8 @@ class OvumClimateHeating(OvumEntityWriting, ClimateEntity):
     _attr_target_temperature_step = PRECISION_HALVES
     _attr_min_temp = 0
     _attr_max_temp = 50
-    _attr_target_temperature_low = 0
-    _attr_target_temperature_high = 50
+    _attr_native_target_temperature_low = 0
+    _attr_native_target_temperature_high = 50
 
     @override
     @property
@@ -134,7 +134,7 @@ class OvumClimateHeating(OvumEntityWriting, ClimateEntity):
 
     @override
     @property
-    def current_temperature(self) -> float | None:
+    def native_current_temperature(self) -> float | None:
         """This value should be provided by a room sensor.
         It could be writable, depending on the configuration.
         """
@@ -142,7 +142,7 @@ class OvumClimateHeating(OvumEntityWriting, ClimateEntity):
 
     @override
     @property
-    def target_temperature(self) -> float | None:
+    def native_target_temperature(self) -> float | None:
         """Return the target temperature based on license level and operation mode."""
         if self._license == OvumLicense.BASIC:
             return self._subsystem.room_temperature_target
@@ -171,7 +171,7 @@ class OvumClimateHeating(OvumEntityWriting, ClimateEntity):
         if (temperature := kwargs.get(ATTR_TEMPERATURE)) is None:
             return
 
-        self._attr_target_temperature = temperature
+        self._attr_native_target_temperature = temperature
 
         attributes = []
 
