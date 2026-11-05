@@ -13,7 +13,7 @@ class Component(StrEnum):
     EMS = "ems"
 
 
-HEATING: tuple[str, ...] = (
+HEATING: tuple[Component, ...] = (
     Component.HEATING_1,
     Component.HEATING_2,
     Component.HEATING_3,
