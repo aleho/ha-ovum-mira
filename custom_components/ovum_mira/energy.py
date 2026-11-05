@@ -5,7 +5,10 @@ from __future__ import annotations
 from datetime import timedelta
 
 from homeassistant.components.integration.const import METHOD_LEFT
-from homeassistant.components.integration.sensor import IntegrationSensor
+from homeassistant.components.integration.sensor import (
+    IntegrationSensor,
+    SensorDeviceClass,
+)
 from homeassistant.const import UnitOfTime
 from homeassistant.core import HomeAssistant
 from homeassistant.helpers import entity_registry
@@ -38,15 +41,16 @@ class OvumEnergySensor(IntegrationSensor):
         device = async_entity_id_to_device(hass, entity_id)
 
         super().__init__(
-            source_entity=entity_id,
-            device=device,
-            unique_id=f"{source_entity.unique_id}_integral",
             integration_method=METHOD_LEFT,
-            round_digits=0,
-            max_sub_interval=timedelta(minutes=5),
-            unit_time=UnitOfTime.HOURS,
-            unit_prefix=None,
             name=None,
+            round_digits=0,
+            source_entity=entity_id,
+            unique_id=f"{source_entity.unique_id}_integral",
+            device_class=SensorDeviceClass.ENERGY,
+            unit_prefix=None,
+            unit_time=UnitOfTime.HOURS,
+            max_sub_interval=timedelta(minutes=5),
+            device=device,
         )
 
         self._attr_translation_key = source_description.translation_key + "_integral"
